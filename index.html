@@ -1,0 +1,43 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script src="./sked.min.js"></script>
+        <script>
+
+            let laterSchedule = {
+                "100": ()=>console.log('later 100'),
+                "1000": ()=>console.log('later 1000')
+            }
+
+            let schedule = {
+                "45": ()=>console.log(45),
+                "1800": ()=>console.log(1800),
+                "100": ()=>console.log(100),
+                "400": ()=>console.log(400),
+                "900": ()=>console.log(900),
+                "1200": sked( laterSchedule )
+            }
+
+
+
+            let timeline = sked( schedule )
+            setTimeout( timeline, 3000 )
+
+        </script>
+        <!-- <script type="module">
+            import {sked} from './sked.min.mjs'
+
+            let schedule = {
+                "45": ()=>console.log(45),
+                "1800": ()=>console.log(1800),
+                "100": ()=>console.log(100),
+                "400": ()=>console.log(400),
+                "900": ()=>console.log(900),
+            }
+
+            let timeline = sked( schedule )
+            setTimeout( timeline, 5000 )
+        </script> -->
+    </body>
+</html>
